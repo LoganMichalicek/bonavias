@@ -1,36 +1,27 @@
+const path = require('path');
+
 module.exports = {
-  entry: __dirname + '/client/src/index.jsx',
+  mode: 'development',
+  entry: './src/app.tsx',
   module: {
     rules: [
       {
-        test: /\.(js|jsx)$/,
+        test: /\.(ts|tsx)$/,
         exclude: /node_modules/,
         use: {
           loader: 'babel-loader',
           options: {
-            presets: ['@babel/preset-react', '@babel/preset-env'],
-          },
-        },
-      },
-      {
-        test: /\.css$/,
-        use: ['style-loader', 'css-loader'],
-      },
-      {
-        test: /\.(svg|eot|woff|woff2|ttf)$/,
-        use: [
-          {
-            loader: 'file-loader',
-            options: {
-              name: 'images/[hash]-[name].[ext]',
-            },
-          },
-        ],
+            presets: ['@babel/preset-env', '@babel/preset-react', '@babel/preset-typescript']
+          }
+        }
       }
-    ],
+    ]
+  },
+  resolve: {
+    extensions: ['.js', '.ts', '.tsx']
   },
   output: {
-    filename: 'bundle.js',
-    path: __dirname + '/client/dist',
-  },
+    path: path.resolve(__dirname, './dist'),
+    filename: 'bundle.js'
+  }
 };
