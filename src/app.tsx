@@ -1,19 +1,18 @@
 import React from 'react';
 import reactDOM from 'react-dom';
-
-interface AppProps {
-  // intentionally blank, we don't have any props expected for App
-}
+import Header from './components/header';
+import Footer from './components/footer';
 
 class App extends React.Component {
-  constructor(props: AppProps) {
+  constructor(props: null) {
     super(props);
   }
 
   render() {
     return (
       <div>
-        <h1>Test Message</h1>
+        <Header />
+        <Footer />
       </div>
     );
   }
