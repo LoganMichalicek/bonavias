@@ -1,20 +1,36 @@
 import React from 'react';
 import reactDOM from 'react-dom';
+import Header from './components/header';
+import Footer from './components/footer';
 
-interface AppProps {
-  // intentionally blank, we don't have any props expected for App
-}
+import About from './components/pages/about';
+import Contact from './components/pages/contact';
+import Donate from './components/pages/donate';
+import Gallery from './components/pages/gallery';
+import Home from './components/pages/home';
+import Testimonials from './components/pages/testimonials';
 
 class App extends React.Component {
-  constructor(props: AppProps) {
+  pages: Record<string, JSX.Element>;
+
+  constructor(props: null) {
     super(props);
+    this.pages = {
+      Home: <Home />,
+      About: <About />,
+      Contact: <Contact />,
+      Donate: <Donate />,
+      Gallery: <Gallery />,
+      Testimonials: <Testimonials />
+    };
   }
 
   render() {
     return (
-      <div>
-        <h1>Test Message</h1>
-      </div>
+      <>
+        <Header pages={this.pages} />
+        <Footer />
+      </>
     );
   }
 }
