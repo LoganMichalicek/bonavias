@@ -1,7 +1,12 @@
 import React from 'react';
 
 export default function Footer() {
-  return <p>© 2020 The Bona Vias Foundation | Privacy Policy | Terms of Service | Follow Us [LINKS]</p>;
+  return (
+    <>
+      <hr />
+      <p>© 2020 The Bona Vias Foundation | Privacy Policy | Terms of Service | Follow Us [LINKS]</p>
+    </>
+  );
 }
 
 // TODO: Add Privacy Policy
