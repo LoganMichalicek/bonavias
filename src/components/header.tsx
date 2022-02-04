@@ -1,30 +1,19 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Link, Routes } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
-interface IHeaderProps {
-  pages: Record<string, JSX.Element>;
-}
-
-export default function Header(props: IHeaderProps) {
+export default function Header(props: { pages: string[] }) {
   return (
-    <Router>
+    <>
       <h1>The Bona Vias Foundation</h1>
       <nav>
-        {Object.keys(props.pages).map((page, idx) => {
-          const path = page === 'Home' ? '/' : '/' + page.toLowerCase();
+        {props.pages.map((page, idx) => {
           return (
-            <Link key={idx} to={path}>
+            <Link key={idx} to={page === 'Home' ? '/' : '/' + page.toLowerCase()}>
               <button type="button">{page}</button>
             </Link>
           );
         })}
       </nav>
-      <Routes>
-        {Object.keys(props.pages).map((page, idx) => {
-          const path = page === 'Home' ? '/' : '/' + page.toLowerCase();
-          return <Route key={idx} path={path} element={props.pages[page]} />;
-        })}
-      </Routes>
-    </Router>
+    </>
   );
 }
