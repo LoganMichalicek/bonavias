@@ -1,11 +1,6 @@
 import React from 'react';
 
-export default class Contact extends React.Component {
-  constructor(props: null) {
-    super(props);
-  }
-
-  render() {
-    return <h2>Contact</h2>;
-  }
+// TODO: Complete this page
+export default function Contact() {
+  return <h2>Contact</h2>;
 }
