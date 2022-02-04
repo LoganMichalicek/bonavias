@@ -1,5 +1,7 @@
 import React from 'react';
 import reactDOM from 'react-dom';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+
 import Header from './components/header';
 import Footer from './components/footer';
 
@@ -27,10 +29,16 @@ class App extends React.Component {
 
   render() {
     return (
-      <>
-        <Header pages={this.pages} />
+      <Router>
+        <Header pages={Object.keys(this.pages)} />
+        <Routes>
+          {Object.keys(this.pages).map((page, idx) => {
+            const path = page === 'Home' ? '/' : '/' + page.toLowerCase();
+            return <Route key={idx} path={path} element={this.pages[page]} />;
+          })}
+        </Routes>
         <Footer />
-      </>
+      </Router>
     );
   }
 }
