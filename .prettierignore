@@ -3,3 +3,4 @@ package*.json
 .babelrc
 tsconfig.json
 dist/
+src/components/data/
