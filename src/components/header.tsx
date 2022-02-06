@@ -1,9 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 
 export default function Header(props: { pages: string[]; initialPage?: string }) {
-  const [currentPage, setCurrentPage] = useState(props.initialPage || '/');
-
   return (
     <>
       <h1>The Bona Vias Foundation</h1>
@@ -12,9 +10,7 @@ export default function Header(props: { pages: string[]; initialPage?: string })
           const path = page === 'Home' ? '/' : '/' + page.toLowerCase();
           return (
             <Link key={idx} to={path}>
-              <button type="button" onClick={() => setCurrentPage(path)} disabled={path === currentPage}>
-                {page}
-              </button>
+              <button type="button">{page}</button>
             </Link>
           );
         })}
@@ -23,3 +19,7 @@ export default function Header(props: { pages: string[]; initialPage?: string })
     </>
   );
 }
+
+// const [currentPage, setCurrentPage] = useState(props.initialPage || '/');
+// onClick={() => setCurrentPage(path)}
+// disabled={path === currentPage}

@@ -12,6 +12,8 @@ class App extends React.Component {
 
   constructor(props: null) {
     super(props);
+
+    // In order of list appearance
     this.pages = {
       Home: <Home />,
       About: <About />,
@@ -32,7 +34,7 @@ class App extends React.Component {
             return <Route key={idx} path={path} element={this.pages[page]} />;
           })}
         </Routes>
-        <Footer />
+        <Footer pages={Object.keys(this.pages)} initialPage={window.location.pathname} />
       </Router>
     );
   }
