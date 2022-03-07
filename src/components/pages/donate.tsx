@@ -2,7 +2,9 @@ import React from 'react';
 
 export default function Donate() {
   return (
-    <>
+    <div style={{
+      backgroundImage: `url("${require('../../assets/contour-blue.gif')}")`
+    }}>
       <h2>Make a Donation</h2>
       <h3>Donations are not yet tax deductible...</h3>
       <h3>We are working on our 501(c)(3) charity status.</h3>
@@ -32,6 +34,6 @@ export default function Donate() {
       <hr />
       <p>{'[VIEW CART]'}</p>
       <p>{'[$5.00] [$10.00] [$20.00] [$50.00]'}</p>
-    </>
+    </div>
   );
 }

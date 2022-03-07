@@ -4,7 +4,7 @@ import * as path from 'path';
 const app = express();
 const port = 3000;
 const devURL = `http://localhost:${port}`;
-const pages = ['about', 'contact', 'donate', 'gallery', 'testimonials'];
+const pages = ['about', 'contact', 'donate', 'gallery', 'testimonials', 'privacy'];
 
 app.use(express.static(path.resolve(__dirname, '../dist')));
 

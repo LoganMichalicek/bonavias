@@ -10,7 +10,9 @@ export default function Testimonials() {
   const keys = Object.keys(data).filter(key => key !== 'default');
   const testimonials = data as Record<string, ITestimonialData[]>;
   return (
-    <>
+    <div style={{
+      backgroundImage: `url("${require('../../assets/contour-blue.gif')}")`
+    }}>
       <h2>Testimonials</h2>
       <p>
         We have helped thousands of clients over our working history, but some have provided feedback that we can share
@@ -42,7 +44,7 @@ export default function Testimonials() {
         any other personal or identifiable information before sharing it publicly.
       </p>
       <p>{'[CONTACT US]'}</p>
-    </>
+    </div>
   );
 }
 

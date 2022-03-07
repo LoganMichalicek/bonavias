@@ -14,6 +14,10 @@ module.exports = {
             presets: ['@babel/preset-env', '@babel/preset-react', '@babel/preset-typescript']
           }
         }
+      },
+      {
+        test: /\.(jpg|jpeg|png|svg|gif)$/,
+        type: 'asset/resource'
       }
     ]
   },

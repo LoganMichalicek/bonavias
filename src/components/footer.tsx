@@ -3,11 +3,11 @@ import Header from './header';
 
 export default function Footer(props: { pages: string[]; initialPage?: string }) {
   return (
-    <>
+    <div className='footer'>
       {/* <Header pages={props.pages} initialPage={props.initialPage}/> */}
-      <hr />
-      <p>© 2020 The Bona Vias Foundation | Privacy Policy | Terms of Service | Follow Us [LINKS]</p>
-    </>
+      <hr style={{ margin: '0px' }}/>
+      <p>© {new Date().getFullYear()} The Bona Vias Foundation | Privacy Policy | Terms of Service | Follow Us [LINKS]</p>
+    </div>
   );
 }
 

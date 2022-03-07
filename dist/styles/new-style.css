@@ -1,0 +1,59 @@
+body{
+  margin: 0px;
+  padding: 0px;
+}
+
+h1 {
+  margin: 0;
+  padding: 10px;
+}
+
+#root {
+  margin: 0 0 0 0;
+}
+
+.header {
+  display: grid;
+  grid-template-columns: 2;
+}
+
+.header-home-title {
+  grid-column: 1;
+  font-family: Raleway;
+  /* color: #cbefe6; */
+  color: white;
+}
+
+.header-nav-bar {
+  grid-column: 2;
+  margin: auto;
+  margin-right: 0;
+  padding-right: 10px;
+}
+
+.footer {
+  background-color: #343A40;
+  color: white
+}
+
+.footer p {
+  margin: 0px;
+}
+
+.home-top-block {
+  border: 3px;
+  border-style: dashed;
+  border-color: aqua;
+  color: #cbefe6;
+  height: 1080px;
+}
+
+.home-bottom-block {
+  border: 3px;
+  border-style: dashed;
+  border-color: green;
+}
+
+.contact-root p {
+  margin: 0px;
+}

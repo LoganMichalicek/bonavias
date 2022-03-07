@@ -2,7 +2,9 @@ import React from 'react';
 
 export default function About() {
   return (
-    <>
+    <div style={{
+      backgroundImage: `url("${require('../../assets/contour-blue.gif')}")`
+    }}>
       <h2>About Us</h2>
       <h3>{'We are working toward our 501(c)(3) charitable organization status.'}</h3>
       <h3>
@@ -27,6 +29,6 @@ export default function About() {
       </p>
       <p>{'[GALLERY] [TESTIMONIALS] [DONATE] [CONTACT]'}</p>
       <p>...</p>
-    </>
+    </div>
   );
 }

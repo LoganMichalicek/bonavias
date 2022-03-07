@@ -57,7 +57,9 @@ export default class Contact extends React.Component {
 
   render() {
     return (
-      <>
+      <div className='contact-root' style={{
+        backgroundImage: `url("${require('../../assets/contour-blue.gif')}")`
+      }}>
         <PageInfo />
         <hr />
         <ContactForm handleSubmit={this.handleMessageSubmit} />
@@ -65,7 +67,7 @@ export default class Contact extends React.Component {
         <FollowUs />
         <hr />
         <SubscribeSection handleSubmit={this.handleSubscribeSubmit} />
-      </>
+      </div>
     );
   }
 }
