@@ -1,13 +1,11 @@
 import React from 'react';
-import Header from './header';
+import { Link } from 'react-router-dom';
 
 export default function Footer(props: { pages: string[]; initialPage?: string }) {
   return (
-    <>
-      {/* <Header pages={props.pages} initialPage={props.initialPage}/> */}
-      <hr />
-      <p>© 2020 The Bona Vias Foundation | Privacy Policy | Terms of Service | Follow Us [LINKS]</p>
-    </>
+    <div className='footer'>
+      <p>© {new Date().getFullYear()} The Bona Vias Foundation <Link to='/privacy'>Privacy Policy</Link> <Link to='/terms'>Terms of Service</Link> | Follow Us [LINKS]</p>
+    </div>
   );
 }
 

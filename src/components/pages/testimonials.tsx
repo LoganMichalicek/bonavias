@@ -1,30 +1,58 @@
 import React from 'react';
 import * as data from '../data/testimonials.json';
+import TestimonialsPlayer from './testimonialsPlayer';
+import { Link } from 'react-router-dom';
 
-interface ITestimonialData {
+export interface ITestimonialData {
   message: string;
   name: string;
 }
 
 export default function Testimonials() {
-  const keys = Object.keys(data).filter(key => key !== 'default');
+  // const titles = Object.keys(data).filter(key => key !== 'default');
   const testimonials = data as Record<string, ITestimonialData[]>;
+
   return (
-    <>
+    <div className='testimonials' style={{
+      // backgroundImage: `url("${require('../../assets/contour-blue.gif')}")`
+    }}>
+      <Description />
+      <hr />
+      <TestimonialsPlayer quotes={testimonials} />
+      <hr />
+      <Letters />
+      <hr />
+      <Feedback />
+    </div>
+  );
+}
+
+const Description = () => {
+  return (
+    <div className='testimonials-description'>
       <h2>Testimonials</h2>
       <p>
         We have helped thousands of clients over our working history, but some have provided feedback that we can share
         to let you know how much they valued the resources and services they received. Under each subject matter
         category, here is what they had to say about us:
       </p>
-      {keys.map((title, idx) => {
-        return <Quotes key={idx} title={title} messages={testimonials[title]} />;
-      })}
-      <hr />
+    </div>
+  )
+}
+
+const Letters = () => {
+  return (
+    <div className='testimonials-letters'>
       <h2>Letters</h2>
       <p>Some of our clients have gone so far as to write letters expressing their gratitude for our services:</p>
-      <Letters />
-      <hr />
+      <p>{'[LETTER A] [LETTER B]'}</p>
+    </div>
+  );
+};
+
+const Feedback = () => {
+  return (
+    <div className='testimonials-feedback'>
       <p>If you have received help from us...</p>
       <h2>We would like to hear from you!</h2>
       <p>
@@ -41,32 +69,7 @@ export default function Testimonials() {
         PLEASE NOTE: If we add your feedback to our testimonials, we will show ONLY your first name and we will redact
         any other personal or identifiable information before sharing it publicly.
       </p>
-      <p>{'[CONTACT US]'}</p>
-    </>
-  );
+      <Link to='/contact'><button>Contact Us</button></Link>
+    </div>
+  )
 }
-
-const Quotes = (props: { title: string; messages: ITestimonialData[] }) => {
-  return (
-    <>
-      <hr />
-      <h3>{props.title}</h3>
-      {props.messages.map((msg, idx) => {
-        return <Quote key={idx} message={msg.message} name={msg.name} />;
-      })}
-    </>
-  );
-};
-
-const Quote = (props: ITestimonialData) => {
-  return (
-    <>
-      <p>{props.message}</p>
-      <p>- {props.name}</p>
-    </>
-  );
-};
-
-const Letters = () => {
-  return <p>{'[LETTER A] [LETTER B]'}</p>;
-};

@@ -1,0 +1,291 @@
+
+
+
+
+
+/*--------------- HEADER ------------------------------------------------------------*/
+
+.header-title-font {            font-family: Vollkorn, Times New Roman, Times;
+                                font-size: 24px;
+                                text-shadow: 3px 3px 3px black;
+                                color: #FFFFFF; }
+
+/* .header-title {                 font-family: Vollkorn, Times New Roman, Times;
+                                font-size: 24px;
+                                text-shadow: 3px 3px 3px black;
+                                color: #FFFFFF;
+                                position: absolute;
+                                top: 28px;
+                                left: 30px; } */
+
+.header-menu {                  position: absolute;
+                                top: 0px;
+                                right: 0px; }
+
+.headerlinks p {                text-decoration: none;
+                                font-family: Tahoma, Verdana, Calibri, Arial;
+                                font-size: 18px;
+                                text-shadow: 3px 3px 2px black;
+                                color: white; }
+
+.headerlinks a:visited {        color: white; }
+
+.headerlinks a:hover {          text-decoration: none;
+                                color: yellow; }
+
+
+/*--------------- FOOTER ------------------------------------------------------------*/
+
+
+.footer-title-font {            font-family: Vollkorn, Times New Roman, Times;
+                                font-size: 20px;
+                                color: #FFFFFF }
+
+.footer-font {                  text-decoration: none;
+                                font-family: Tahoma, Verdana, Calibri, Arial;
+                                font-size: 16px;
+                                color: white; }
+
+.footerlinks a {                text-decoration: none;
+                                font-family: Tahoma, Verdana, Calibri, Arial;
+                                font-size: 16px;
+                                color: #C0C0C0; }
+.footerlinks a:visited {        color: #C0C0C0; }
+.footerlinks a:hover {          text-decoration: none;
+                                color: yellow; }
+
+.background-home {              background-image: url("graphics/backgrounds/home-v4a.jpg");
+                                height: 100%;
+                        /*        height: 1080px;         */
+                                position: relative;
+                                opacity: 1;
+                                background-position: center;
+                                background-repeat: no-repeat;
+                                background-size: cover; }
+
+.background-header {            background-image: url("graphics/backgrounds/header-shaded-dark-80.jpg");
+                                height: 80px;
+                                position: relative;
+                                opacity: 1;
+                                background-position: center;
+                                background-repeat: no-repeat;
+                                background-size: cover; }
+
+/*------------- CONTAINERS ----------------------------------------------------------*/
+
+.container-white {              position: relative;
+                                text-align: center;
+                         /*       color: #FFFFFF;        */
+                                width: 100%;
+                                margin: 0px;
+                                background-color: white;
+                                padding: 60px 60px;
+                                border: 0px solid #000000; }
+
+.container-gray {               position: relative;
+                                text-align: center;
+                                width: 100%;
+                                margin: 0px;
+                                background-color: #F8F8F8;
+                                padding: 60px 60px;
+                                border: 0px solid #000000; }
+
+.container-blue {               position: relative;
+                                text-align: center;
+                         /*       color: #D0F0FF;        */
+                                width: 100%;
+                                margin: 0px;
+                                background-color: #D0F0FF;
+                                padding: 60px 60px;
+                                border: 0px solid #000000; }
+
+
+
+
+              .whitepanel {                   width: 100%;
+                                margin: 0px;
+                                background-color: white;
+                                padding: 60px 60px;
+                                border: 0px solid #000000 }
+
+               .shadepanel {                   width: 100%;
+                                margin: 0px;
+                                background-color: #D0F0FF;
+                                background-color: #F8F8F8;
+                                padding: 60px 60px;
+                                border: 0px solid #000000 }
+
+.inputfield {                   color: black;
+                                font-family: Tahoma, Calibri, Arial, Verdana;
+                                font-size: 16px;
+                                background-color: white;
+                                border: 2px solid #000000;
+                                border-radius: 6px;
+                                padding: 12px 16px;
+                                margin: 0px 20px;
+                                box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19) }
+
+.comment {                      resize: none;
+                                height: 112px;
+                                width: 480px;
+                                color: black;
+                                font-size: 16px;
+                                font-family: Tahoma, Calibri, Arial, Verdana;
+                                padding: 12px 16px;
+                                border-radius: 6px;
+                                box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+                                background-color: white;
+                                border: 2px solid #000000 }
+
+.content {                      width: 80%;                         /*   1200px;   */
+
+                                padding: 0px 0px 0px 0px;
+                      /*          font-family: Arial;        */
+                      /*          font-size: 16px;           */
+                                margin: 0px 0px;
+                                border: 2px solid #000000 }
+
+
+/*-------------- BUTTONS ------------------------------------------------------------*/
+
+.buttonlink {                   font: bold 11px Arial;                /* small gray button - not used */
+                                text-decoration: none;
+                                background-color: #EEEEEE;
+                                color: #333333;
+                                padding: 2px 6px 2px 6px;
+                                border-top: 1px solid #CCCCCC;
+                                border-right: 1px solid #333333;
+                                border-bottom: 1px solid #333333;
+                                border-left: 1px solid #CCCCCC }
+
+.button-home {                  background-color: #0000C0;
+                                border: none;
+                                padding: 12px 24px;
+                                border-radius: 6px;
+                                border: 0px solid #000000;
+                                box-shadow: 2px 3px 6px #000000;
+                                text-align: center;
+                                text-decoration: none;
+                                display: inline-block;
+                                font-family: Verdana, 'Segoe UI','SF Pro Text',Roboto, Sans-Serif, Arial;
+                                font-size: 18px;
+                                font-weight: normal;
+                                color: white;
+                                margin: 8px 8px;
+                                opacity: 1;
+                                transition: 0.2s;
+                                transition-duration: 0.0s;
+                                cursor: pointer; }
+
+.button-home:hover {            background-color: #0040FF;
+                                opacity: 1.0;
+                                color: yellow;
+                                box-shadow: 5px 8px 10px #000000; }
+
+.button-home:active {           transform: translateY(4px); }
+
+.button-icon {                  background-color: #0000C0;
+                                border: none;
+                                padding: 7px 12px;
+                                border-radius: 6px;
+                                border: 0px solid #000000;
+                                box-shadow: 2px 3px 6px #000000;
+                                text-align: center;
+                                display: inline-block;
+                                margin: 0px 8px;
+                                opacity: 1;
+                                transition: 0.2s;
+                                transition-duration: 0.0s;
+                                cursor: pointer }
+
+.button-icon:hover {            background-color: #0040FF;
+                                opacity: 1.0;
+                                color: white;
+                                box-shadow: 5px 8px 10px #000000; }
+
+.button-icon:active {           transform: translateY(4px); }
+
+.button1 {                      background-color: #0000C0;                /* comment */
+                                border: none;
+                                color: white;
+                                padding: 15px 32px;
+                                border-radius: 6px;
+                                border: 0px solid #000000;
+                                box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+                                text-align: center;
+                                text-decoration: none;
+                                display: inline-block;
+                                font-family: Verdana, Raleway, Vollkorn, 'Segoe UI','SF Pro Text',Roboto,sans-serif, Arial;
+                                font-size: 18px;
+                                font-weight: normal;
+                                margin: 20px 8px;
+                                opacity: 0.8;
+                                transition: 0.2s;
+                                transition-duration: 0.0s;
+                                cursor: pointer }
+
+.button1:hover {                /*  background-color: #0000E0;  */
+                                opacity: 1.0;
+                                color: white;
+                                box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19); }
+
+.button1:active {               transform: translateY(4px); }
+
+
+/*---------------- HOME -------------------------------------------------------------*/
+
+.home-top-left {                position: absolute;
+                                top: 80px;
+                                left: 10px;
+                                width: 100%;
+                                text-align: left; }
+
+.home-logo {                    opacity: 1;
+                                margin: 0px 0px;
+                                border: 0px solid #FFFFFF;
+                                box-shadow: 2px 3px 6px #000000; }
+
+.home-bottom-left {             position: absolute;
+                                bottom: 2%;
+                                left: 10px; }
+
+.home-bottom-right {            position: absolute;
+                                bottom: 2%;
+                                right: 10px; }
+
+.home-title {              font-family: Vollkorn, Times New Roman, Times;
+                                font-size: 32px;
+                                line-height: 130%;
+                                text-shadow: 3px 3px 2px black;
+                                color: #FFFFFF; }
+
+.home-subtitle-font {           font-family: Raleway, Tahoma, Calibri, Arial, Verdana;
+                                font-size: 20px;
+                                line-height: 130%;
+                                text-shadow: 3px 3px 2px black;
+                                color: #FFFFFF; }
+
+/*---------------- PAGES -------------------------------------------------------------*/
+
+.page-title {                   font-family: Vollkorn, Times New Roman, Times;
+                                font-size: 32px;
+                                color: #000080 }
+
+.page-subtitle {                font-family: Raleway, Tahoma, Calibri, Arial, Verdana;
+                                font-size: 24px;
+                                line-height: 150%;
+                                color: #C00000 }
+
+.page-text {                    font-family: Raleway, Tahoma, Calibri, Arial, Verdana;
+                                font-size: 20px;
+                                line-height: 150%;
+                                color: #000000 }
+
+.section-title {                font-family: Vollkorn, Times New Roman, Times;
+                                font-size: 28px;
+                                color: #000000 }
+
+.section-text {                 font-family: Raleway, Tahoma, Calibri, Arial, Verdana;
+                                font-size: 18px;
+                                line-height: 150%;
+                                color: #000000 }

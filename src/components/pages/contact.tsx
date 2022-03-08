@@ -57,28 +57,33 @@ export default class Contact extends React.Component {
 
   render() {
     return (
-      <>
-        <PageInfo />
+      <div className='contact' style={{
+        backgroundImage: `url("${require('../../assets/contour-blue.gif')}")`
+      }}>
+        <ContactInfo />
         <hr />
         <ContactForm handleSubmit={this.handleMessageSubmit} />
         <hr />
         <FollowUs />
         <hr />
         <SubscribeSection handleSubmit={this.handleSubscribeSubmit} />
-      </>
+      </div>
     );
   }
 }
 
-const PageInfo = () => {
+const ContactInfo = () => {
   return (
-    <>
+    <div className='contact-info'>
       <h2>Contact Information</h2>
       <p>Please contact us using any of the following methods...</p>
+      <br/>
       <h3>Mailing Address</h3>
       <p>9975 Wadsworth Parkway, Westminster, CO 80021</p>
+      <br/>
       <h3>Email Address</h3>
       <p>Please use the form below or email us at info@bonavias.org for more information.</p>
+      <br/>
       <h3>No Walk-In Services</h3>
       <p>
         At this time, and until COVID-19 restrictions are lifted permanently, we do not maintain any walk-in office
@@ -86,13 +91,13 @@ const PageInfo = () => {
         be conducted virtually. In person appointments and group seminars are only available in the vicinity of Denver,
         Colorado.
       </p>
-    </>
+    </div>
   );
 };
 
 const ContactForm = (props: ISubmittable) => {
   return (
-    <>
+    <div className='contact-form'>
       <h2>Send Us A Message</h2>
       <p>We will respond as soon as possible.</p>
       <form onSubmit={props.handleSubmit}>
@@ -133,22 +138,22 @@ const ContactForm = (props: ISubmittable) => {
         <div>{'[RECAPTCHA]'}</div>
         <input type="submit" value="Send Message" />
       </form>
-    </>
+    </div>
   );
 };
 
 const FollowUs = () => {
   return (
-    <>
+    <div className='follow-us'>
       <h2>Follow Us On Social Media</h2>
       <p>{'[Facebook] [Twitter] [Instagram] [YouTube]'}</p>
-    </>
+    </div>
   );
 };
 
 const SubscribeSection = (props: ISubmittable) => {
   return (
-    <>
+    <div className='subscribe'>
       <h2>Subscribe</h2>
       <h3>Sign up for our email notifications:</h3>
       <form onSubmit={props.handleSubmit}>
@@ -164,6 +169,6 @@ const SubscribeSection = (props: ISubmittable) => {
           </p>
         </div>
       </form>
-    </>
+    </div>
   );
 };
