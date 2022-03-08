@@ -4,6 +4,7 @@
   "description": "",
   "main": "dist/index.html",
   "scripts": {
+    "start": "npm run server",
     "build": "webpack",
     "server": "ts-node server/index.ts",
     "build-dev": "webpack --watch",
