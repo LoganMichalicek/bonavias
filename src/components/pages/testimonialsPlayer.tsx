@@ -16,35 +16,20 @@ export default function TestimonialsPlayer(props: TestimonialsPlayerProps) {
   }
 
   const quote = props.quotes[titles[currentTitleIdx]][currentQuoteIdx];
+  const quoteCount = props.quotes[titles[currentTitleIdx]].length;
 
   return (
-    <div className='testimonials-player' style={{
-      border: '3px',
-      borderStyle: 'dashed',
-      borderColor: 'green'
-    }}>
-      <div className="tp-titles">
-        <button className='left-arrow' onClick={() => setTitle(currentTitleIdx - 1)} disabled={currentTitleIdx <= 0}>Left</button>
-        <h3 className='tp-title'>{titles[currentTitleIdx]}</h3>
-        <button className='right-arrow' onClick={() => setTitle(currentTitleIdx + 1)} disabled={currentTitleIdx >= titles.length - 1}>Right</button>
+    <div className='testimonials-player'>
+      <button className='title-left' onClick={() => setTitle(currentTitleIdx - 1)} disabled={currentTitleIdx <= 0}>Left</button>
+      <h3 className='title-text'>{titles[currentTitleIdx]}</h3>
+      <button className='title-right' onClick={() => setTitle(currentTitleIdx + 1)} disabled={currentTitleIdx >= titles.length - 1}>Right</button>
+      <button className='quote-left' onClick={() => setCurrentQuoteIdx(currentQuoteIdx - 1)} disabled={currentQuoteIdx <= 0}>Left</button>
+      <img src={'./assets/quote-blue.png'}/>
+      <div className='quote-text'>
+        <p>{quote.message}</p>
+        <p><i>{quote.name}</i></p>
       </div>
-      <div className="tp-quote">
-        <button className='left-arrow' onClick={() => setCurrentQuoteIdx(currentQuoteIdx - 1)} disabled={currentQuoteIdx <= 0}>Left</button>
-        <Quote quote={quote} />
-        <button className='right-arrow' onClick={() => setCurrentQuoteIdx(currentQuoteIdx + 1)} disabled={currentQuoteIdx >= titles.length - 1}>Right</button>
-      </div>
+      <button className='quote-right' onClick={() => setCurrentQuoteIdx(currentQuoteIdx + 1)} disabled={currentQuoteIdx >= quoteCount - 1}>Right</button>
     </div>
   );
 }
-
-const Quote = (props: { quote: ITestimonialData }) => {
-  return (
-    <div className='tp-quote'>
-      <img src={'./assets/quote-blue.png'}/>
-      <div className='tp-quote-text'>
-        <p>{props.quote.message}</p>
-        <p><i>{props.quote.name}</i></p>
-      </div>
-    </div>
-  );
-};
