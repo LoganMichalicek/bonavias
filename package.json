@@ -4,7 +4,7 @@
   "description": "",
   "main": "dist/index.html",
   "scripts": {
-    "build": "webpack",
+    "build": "webpack && ts-node server/index.ts",
     "server": "ts-node server/index.ts",
     "build-dev": "webpack --watch",
     "server-dev": "npx nodemon server/index.ts",
