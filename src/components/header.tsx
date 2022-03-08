@@ -17,7 +17,7 @@ export default function Header(props: { pages: string[]; initialPage?: string })
           })}
         </nav>
       </div>
-      <hr />
+      {/* <hr /> */}
     </>
   );
 }

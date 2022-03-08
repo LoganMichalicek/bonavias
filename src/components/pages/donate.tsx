@@ -2,21 +2,39 @@ import React from 'react';
 
 export default function Donate() {
   return (
-    <div style={{
+    <div className='donate' style={{
       backgroundImage: `url("${require('../../assets/contour-blue.gif')}")`
     }}>
-      <h2>Make a Donation</h2>
-      <h3>Donations are not yet tax deductible...</h3>
-      <h3>We are working on our 501(c)(3) charity status.</h3>
-      <p>
-        Your generous donations go directly to sharing expert resources and services that we offer FREE OF CHARGE to the
-        general public in order to provide equal opportunities to everyone. We go to great lengths to minimize expenses
-        so that our clients receive as much value from your donation as possible. In fact, most of our staff and subject
-        matter experts work as volunteers who are committed to sharing their personal knowledge and professional skills
-        as a means of giving back to their communities after their own successful careers. We want everyone to have the
-        opportunity to enjoy that same success.
-      </p>
+      <Description />
       <hr />
+      <Methods />
+      <hr />
+      <Cards />
+    </div>
+  );
+}
+
+function Description() {
+  return (
+    <div className='donation-description'>
+      <h2>Make a Donation</h2>
+        <h3>Donations are not yet tax deductible...</h3>
+        <h3>We are working on our 501(c)(3) charity status.</h3>
+        <p>
+          Your generous donations go directly to sharing expert resources and services that we offer FREE OF CHARGE to the
+          general public in order to provide equal opportunities to everyone. We go to great lengths to minimize expenses
+          so that our clients receive as much value from your donation as possible. In fact, most of our staff and subject
+          matter experts work as volunteers who are committed to sharing their personal knowledge and professional skills
+          as a means of giving back to their communities after their own successful careers. We want everyone to have the
+          opportunity to enjoy that same success.
+        </p>
+    </div>
+  );
+}
+
+function Methods() {
+  return (
+    <div className='donation-methods'>
       <h3>Check or Money Order by Mail</h3>
       <p>
         Please make out checks or money orders to "The Bona Vias Foundation" and send them to the mailing address on our
@@ -31,8 +49,13 @@ export default function Donate() {
         cart may contain only one denomination at a time. If you have any problems, try viewing your cart and removing
         the unwanted amount.
       </p>
-      <hr />
-      <p>{'[VIEW CART]'}</p>
+    </div>
+  );
+}
+
+function Cards() {
+  return (
+    <div className='donation-cards'>
       <p>{'[$5.00] [$10.00] [$20.00] [$50.00]'}</p>
     </div>
   );

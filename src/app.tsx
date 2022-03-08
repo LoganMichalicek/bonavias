@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import reactDOM from 'react-dom';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
@@ -9,7 +9,6 @@ import { About, Contact, Donate, Gallery, Home, Testimonials, Privacy, Terms } f
 
 class App extends React.Component {
   pages: Record<string, JSX.Element>;
-  currentPage: string;
 
   constructor(props: null) {
     super(props);
@@ -21,30 +20,20 @@ class App extends React.Component {
       Contact: <Contact />,
       Donate: <Donate />,
       Gallery: <Gallery />,
-      Testimonials: <Testimonials />,
-      Privacy: <Privacy />,
-      Terms: <Terms />
+      Testimonials: <Testimonials />
     };
 
-    this.currentPage = window.location.pathname;
-    this.setPage = this.setPage.bind(this);
-  }
-
-  setPage(newPage: string) {
-    this.currentPage = newPage;
-    console.log(this.currentPage);
   }
 
   render() {
-    console.log(this.currentPage);
     return (
       <div id="app"
-      style={{
-        backgroundImage: `url("${require('./assets/home-shaded-dark.jpg')}")`,
-        backgroundPosition: 'center center',
-        backgroundRepeat: 'no-repeat',
-        backgroundSize: 'auto 100%'
-      }}
+        style={{
+          backgroundImage: `url("${require('./assets/home-shaded-dark.jpg')}")`,
+          // backgroundPosition: 'top center',
+          // backgroundRepeat: 'no-repeat',
+          // backgroundSize: 'contain'
+        }}
       >
         <Router>
           <Header pages={Object.keys(this.pages)} initialPage={window.location.pathname} />
@@ -53,6 +42,8 @@ class App extends React.Component {
               const path = page === 'Home' ? '/' : '/' + page.toLowerCase();
               return <Route key={idx} path={path} element={this.pages[page]}/>;
             })}
+            <Route key={11} path={'privacy'} element={<Privacy />} />
+            <Route key={11} path={'terms'} element={<Terms />} />
           </Routes>
           <Footer pages={Object.keys(this.pages)} initialPage={window.location.pathname} />
         </Router>
